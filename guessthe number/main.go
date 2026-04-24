@@ -17,8 +17,15 @@ func main(){
 	var secondNumber=rand.Intn(9)+2
 	var subtraction=rand.Intn(9)+2
 
-	var answer int //int default is 0 and string default is "" empty string
-	reader:=bufio.NewReader(os.Stdin)
+	var answer=firstNumber*secondNumber-subtraction
+	playThegame(firstNumber,secondNumber,subtraction,answer)
+	
+
+}
+
+
+func playThegame(firstNumber,secondNumber,subtraction,answer int){
+reader:=bufio.NewReader(os.Stdin)
 	//display a welcome /instruction
 	fmt.Println("Guess the number game")
 	fmt.Println("---------------------")
@@ -36,7 +43,6 @@ func main(){
 	reader.ReadString('\n')
 	fmt.Println("Now subtract",subtraction)
 	//give them answer
-	answer=firstNumber*secondNumber-subtraction
+	
 	fmt.Println("The answer is", answer)
-
 }
