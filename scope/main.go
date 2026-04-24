@@ -15,8 +15,8 @@ func main(){
 	newString:=packageone.PublicVar//accessing the public variable from packageone
 	fmt.Println(newString)
 	
-	secondSring:=packageone.PrivateVar// trying to access the private variable from packageone will result in an error because it is not exported and only accessible within the packageone
-	fmt.Println(secondSring)
+	// secondSring:=packageone.PrivateVar// trying to access the private variable from packageone will result in an error because it is not exported and only accessible within the packageone
+	// fmt.Println(secondSring)
 }
 
 func myFunc(){
